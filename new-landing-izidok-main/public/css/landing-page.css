@@ -1,0 +1,247 @@
+.bg-hero{
+    background-image: url('../images/background-hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+}
+.hero-image{
+    bottom: 0rem;
+}
+.hero-float-left-top{
+    bottom: 12rem;
+    left: 20rem;
+}
+.hero-float-left-bottom{
+    bottom: -1rem;
+    left: 20rem;
+}
+.hero-float-right-top{
+    bottom: 14rem;
+    right: 31rem;
+}
+.hero-float-right-bottom{
+    bottom: -2rem;
+    right: 31rem;
+}
+
+/* tentang kami */
+#tentang-kami li{
+    list-style: none;
+}
+
+/* keunggulan */
+.mt-sm-n15rem{
+    margin-top: -15rem !important;
+}
+.pt-10rem {
+    padding-top: 10rem !important;
+}
+.circle{
+    text-align: center;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    background-position:50% 50%;
+    background-repeat:no-repeat;    
+}
+.circle.rekam-medis{
+    background-image: url("../images/icons/rekam_medis.png");
+}
+.circle.bridging{
+    background-image: url("../images/icons/bridging.png");
+}
+.circle.komisi{
+    background-image: url("../images/icons/komisi.png");
+}
+.circle.iso{
+    background-image: url("../images/icons/iso.png");
+}
+.circle.follow-up{
+    background-image: url("../images/icons/follow_up.png");
+}
+
+/* pricing */
+.text-white .path1{
+    color: #50cd89 !important;
+}
+.text-primary .path1{
+    color: #fff !important;
+}
+
+/* testimoni */
+.testimoni {
+    background-image: url('../images/background-testimoni.png');
+    background-size: cover;
+    min-height: 500px;
+    background-color: #6193C6;
+}
+.testimoni-img{
+    text-align: center;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-position:50% 50%;
+    background-repeat:no-repeat;    
+}
+
+/* contact */
+.contact .info i {
+    font-size: 20px;
+    color: #2487ce;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #e3f0fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.contact .info h4 {
+    padding: 0 0 0 60px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #124265;
+}
+.contact .info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #217bbc;
+}
+.contact .info .email,
+.contact .info .phone,
+.contact .info .whatsapp {
+    margin-top: 20px;
+}
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i,
+.contact .info .whatsapp:hover i {
+  background: #2487ce;
+  color: #fff;
+}
+
+/* Footer */
+.landing-dark-footer-top{
+    background: #002952;
+}
+.landing-dark-footer-bottom{
+    background: #011B35;
+}
+#footer .social-links a {
+    font-size: 22px;
+    display: inline-block;
+    background: #fff;
+    color: #2487ce;
+    line-height: normal;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 5px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+  
+#footer .social-links a:hover {
+    background: #3194db;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* responsive */
+@media (min-width: 576px) {
+    .hero-float-left-top{
+        bottom: 12rem;
+        left: 20rem;
+    }
+    .hero-float-left-bottom{
+        bottom: -1rem;
+        left: 20rem;
+    }
+    .hero-float-right-top{
+        bottom: 14rem;
+        right: 31rem;
+    }
+    .hero-float-right-bottom{
+        bottom: -2rem;
+        right: 31rem;
+    }
+}
+@media (min-width: 768px) {
+    .hero-float-left-top{
+        bottom: 12rem;
+        left: 20rem;
+    }
+    .hero-float-left-bottom{
+        bottom: -1rem;
+        left: 20rem;
+    }
+    .hero-float-right-top{
+        bottom: 14rem;
+        right: 31rem;
+    }
+    .hero-float-right-bottom{
+        bottom: -2rem;
+        right: 31rem;
+    }
+}
+@media (min-width: 992px) {
+    .hero-float-left-top{
+        bottom: 12rem;
+        left: 20rem;
+    }
+    .hero-float-left-bottom{
+        bottom: -1rem;
+        left: 20rem;
+    }
+    .hero-float-right-top{
+        bottom: 14rem;
+        right: 31rem;
+    }
+    .hero-float-right-bottom{
+        bottom: -2rem;
+        right: 31rem;
+    }
+}
+@media (min-width: 1200px) {
+    .hero-float-left-top{
+        bottom: 17rem;
+        left: 26.5rem;
+    }
+    .hero-float-left-bottom{
+        bottom: 4rem;
+        left: 26.5rem;
+    }
+    .hero-float-right-top{
+        bottom: 18rem;
+        right: 24rem;
+    }
+    .hero-float-right-bottom{
+        bottom: 4rem;
+        right: 24rem;
+    }
+}
+@media (min-width: 1400px){
+    .hero-float-left-top{
+        bottom: 18rem;
+        left: 48rem;
+    }
+    .hero-float-left-bottom{
+        bottom: 5rem;
+        left: 48rem;
+    }
+    .hero-float-right-top{
+        bottom: 19rem;
+        right: 45rem;
+    }
+    .hero-float-right-bottom{
+        bottom: 3rem;
+        right: 45rem;
+    }
+}
