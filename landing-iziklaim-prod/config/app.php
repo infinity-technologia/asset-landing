@@ -28,9 +28,7 @@ return [
     | services the application utilizes. Set this in your ".env" file.
     |
     */
-
     'env' => env('APP_ENV', 'production'),
-
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode
@@ -58,6 +56,7 @@ return [
     'url' => env('APP_URL', 'http://localhost'),
 
     'asset_url' => env('ASSET_URL'),
+    'api_url' => env('API_BE_URL'),
 
     /*
     |--------------------------------------------------------------------------

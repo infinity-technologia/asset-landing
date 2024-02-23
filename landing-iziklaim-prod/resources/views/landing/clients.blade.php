@@ -8,62 +8,20 @@
 <section class="clients clients-bg py-0">
     <div class="container">
         <div class="marquee">
-            <div class="marquee-content"> 
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/car.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/mp.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/abadi.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/prixa.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/apln.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/global-excel.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/aaa.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/syntech.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/rey.png') }}" alt="">
-              </div>
-              
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/car.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/mp.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/abadi.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/prixa.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/apln.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/global-excel.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/aaa.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/syntech.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/clients/rey.png') }}" alt="">
-              </div>
+            <div class="marquee-content">
+                <div class="marquee-item">
+                    <img src="{{ asset('img/clients/car.png') }}" alt="">
+                </div>
+                @foreach ($provider['slider']['client'] as $pro)
+                    <div class="marquee-item">
+                        <img src="{{ $pro['images'] }}" alt="">
+                    </div>
+                @endforeach
+                @foreach ($provider['slider']['client'] as $pro)
+                    <div class="marquee-item">
+                        <img src="{{ $pro['images'] }}" alt="">
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>

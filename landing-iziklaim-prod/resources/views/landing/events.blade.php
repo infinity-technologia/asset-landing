@@ -5,95 +5,20 @@
         </div>
         <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="events-item">
-                        <div class="member">
-                            <div class="events-img">
-                                <img src="{{ asset('img/events/raker-izikalim.png') }}" class="img-fluid rounded" alt="">
-                            </div>
-                            <div class="member-info pt-3">
-                                <span>Sambut 2024, iziklaim Kedepankan teknologi AI Mudahkan Proses Klaim Asuransi Kesehatan</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="events-item">
-                        <div class="member">
-                            <div class="events-img">
-                                <img src="{{ asset('img/events/6.png') }}" class="img-fluid rounded" alt="">
-                            </div>
-                            <div class="member-info pt-3">
-                                <span>iziklaim dan Good Doctor menjalin kemitraan untuk peningkatan proses layanan Telemedisin secara digital</span>
+                @foreach ($event as $ev)
+                    <div class="swiper-slide">
+                        <div class="events-item">
+                            <div class="member">
+                                <div class="events-img">
+                                    <img src="{{ $ev['image'] }}" class="img-fluid rounded" alt="">
+                                </div>
+                                <div class="member-info pt-3">
+                                    <span>{{ $ev['name'] }}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- End testimonial item -->
-                <div class="swiper-slide">
-                    <div class="events-item">
-                        <div class="member">
-                            <div class="events-img">
-                                <img src="{{ asset('img/events/4.png') }}" class="img-fluid rounded" alt="">
-                            </div>
-                            <div class="member-info pt-3">
-                                <span>iziklaim mendapatkan Nominasi <b>"Portal Administrasi Terbaik"</b> di event gathering RS JIH Jogyakarta</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End testimonial item -->
-                <div class="swiper-slide">
-                    <div class="events-item">
-                        <div class="member">
-                            <div class="events-img">
-                                <img src="{{ asset('img/events/5.png') }}" class="img-fluid rounded" alt="">
-                            </div>
-                            <div class="member-info pt-3">
-                                <span>iziklaim mendapatkan Nominasi <b>"Portal Administrasi Terbaik"</b> di event gathering RS JIH Jogyakarta</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End testimonial item -->
-                <div class="swiper-slide">
-                    <div class="events-item">
-                        <div class="member">
-                            <div class="events-img">
-                                <img src="{{ asset('img/events/1.png') }}" class="img-fluid rounded" alt="">
-                            </div>
-                            <div class="member-info pt-3">
-                                <span>Kunjungan sosialisasi iziklaim oleh Medlinx dan Medika Plaza di RS Fatmawati</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End testimonial item -->
-                <div class="swiper-slide">
-                    <div class="events-item">
-                        <div class="member">
-                            <div class="events-img">
-                                <img src="{{ asset('img/events/2.png') }}" class="img-fluid rounded" alt="">
-                            </div>
-                            <div class="member-info pt-3">
-                                <span>Kunjungan sosialisasi iziklaim oleh Medlinx di Klinik Fisio</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End testimonial item -->
-                <div class="swiper-slide">
-                    <div class="events-item">
-                        <div class="member">
-                            <div class="events-img">
-                                <img src="{{ asset('img/events/3.png') }}" class="img-fluid rounded" alt="">
-                            </div>
-                            <div class="member-info pt-3">
-                                <span>Kunjungan sosialisasi iziklaim oleh Medlinx dan Medika Plaza di RS Fatmawati</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
                 <!-- End testimonial item -->
             </div>
             <div class="swiper-pagination"></div>

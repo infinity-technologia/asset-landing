@@ -1,56 +1,17 @@
 <section id="providers" class="providers section-bg">
     <div class="container-fluid">
         <div class="marquee">
-            <div class="marquee-content"> 
-              <div class="marquee-item">
-                <img src="{{ asset('img/provider/siloam.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/provider/ramsay.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/provider/pondok-indah.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/provider/mitra-keluarga.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/provider/sari-asih.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/provider/rscm.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/provider/hermina.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/provider/ihc.png') }}" alt="">
-              </div>
-              
-              <div class="marquee-item">
-                <img src="{{ asset('img/provider/siloam.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/provider/ramsay.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/provider/pondok-indah.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/provider/mitra-keluarga.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/provider/sari-asih.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/provider/rscm.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/provider/hermina.png') }}" alt="">
-              </div>
-              <div class="marquee-item">
-                <img src="{{ asset('img/provider/ihc.png') }}" alt="">
-              </div>
+            <div class="marquee-content">
+                @foreach ($provider['slider']['provider'] as $pro)
+                    <div class="marquee-item">
+                        <img src="{{ $pro['images'] }}" alt="">
+                    </div>
+                @endforeach
+                @foreach ($provider['slider']['provider'] as $pro)
+                    <div class="marquee-item">
+                        <img src="{{ $pro['images'] }}" alt="">
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>

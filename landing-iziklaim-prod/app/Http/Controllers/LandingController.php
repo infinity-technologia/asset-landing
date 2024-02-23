@@ -3,14 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class LandingController extends Controller
 {
     public function index(){
+       
+        $apiUrl = env('API_BE_URL')."api/v1/iziklaim";
         $data['title'] = 'Home';
-        return view('landing', $data);
+        $response = Http::get($apiUrl);
+        if ($response->successful()) {
+            $res = $response->json();
+            $data += $res['data'];
+            return view('landing', $data);
+        }else{
+            return 'API NOT WORKING';
+        }
     }
 
     public function formDownloadProfile(){
