@@ -4,24 +4,37 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class LandingController extends Controller
 {
     public function index(){
-        $data = [
-            'title' => 'Home'
-        ];
-        return view('welcome', $data);
+        $apiUrl = env('API_BE_URL')."api/v1/izidok";
+        $data['title'] = 'Home';
+        $response = Http::get($apiUrl);
+        if ($response->successful()) {
+            $res = $response->json();
+            $data += $res['data'];
+            return view('welcome', $data);
+        }else{
+            return 'API NOT WORKING';
+        }
     }
 
     public function newsUpdate(){
-        $data = [
-            'title' => 'News & Update',
-            'page' => 'news-update'
-        ];
-        return view('landing.others.news-update', $data);
+        $apiUrl = env('API_BE_URL')."api/v1/izidok";
+        $data['title'] = 'Home';
+        $data['page'] = 'news-update';
+        $response = Http::get($apiUrl);
+        if ($response->successful()) {
+            $res = $response->json();
+            $data += $res['data'];
+            return view('landing.others.news-update', $data);
+        }else{
+            return 'API NOT WORKING';
+        }
     }
 
     public function newsUpdateDetail($slug){

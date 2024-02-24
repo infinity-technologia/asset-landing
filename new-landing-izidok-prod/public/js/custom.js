@@ -5,9 +5,6 @@ if (preloader) {
     });
 }
 
-$('.play-image').click(function(){
-    window.open("https://youtu.be/gC-k51pxP8A?si=QlYxDNDUI3XjgUfj", '_blank');
-});
 
 $(".number").on("keypress keyup blur",function (event) {    
     $(this).val($(this).val().replace(/[^\d].+/, ""));
@@ -16,33 +13,6 @@ $(".number").on("keypress keyup blur",function (event) {
      }
  }); 
 
-$('.show-more-1').click(function(){
-    if($(this).html() == 'Lihat Selengkapnya'){
-        $('.hide-price-1').slideDown()
-        $(this).html('Lihat Lebih Sedikit')
-    }else{
-        $('.hide-price-1').slideUp()
-        $(this).html('Lihat Selengkapnya')
-    }
-})
-$('.show-more-2').click(function(){
-    if($(this).html() == 'Lihat Selengkapnya'){
-        $('.hide-price-2').slideDown()
-        $(this).html('Lihat Lebih Sedikit')
-    }else{
-        $('.hide-price-2').slideUp()
-        $(this).html('Lihat Selengkapnya')
-    }
-})
-$('.show-more-3').click(function(){
-    if($(this).html() == 'Lihat Selengkapnya'){
-        $('.hide-price-3').slideDown()
-        $(this).html('Lihat Lebih Sedikit')
-    }else{
-        $('.hide-price-3').slideUp()
-        $(this).html('Lihat Selengkapnya')
-    }
-})
 
 
 let items = document.querySelectorAll('#testimoni-carousel .carousel-item')
