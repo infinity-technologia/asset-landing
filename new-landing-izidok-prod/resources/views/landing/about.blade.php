@@ -7,7 +7,7 @@
         <div class="row gy-10 mb-md-20">
             <div class="col-md-6 px-5">
                 <div class="text-center mb-10 mb-md-0">
-                    <img src="{{ asset('images/ilustrations/about.png') }}" class="img-fluid" alt="" />
+                    <img src="{{ $about['image'] }}" class="img-fluid" alt="" />
                 </div>
             </div>
             <div class="col-md-6 px-5">

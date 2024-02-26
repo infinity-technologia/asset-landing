@@ -38,15 +38,14 @@ class LandingController extends Controller
     }
 
     public function newsUpdateDetail($slug){
-        $page = [
-            'izidok-terus-berkembang-demi-mendukung-kebijakan-pemerintah-terkait-rekam-medis-elektronik' => 'izidok-berkembang',
-            'izidok-siap-menjadi-pionir-ekosistem-kesehatan-digital-di-indonesia' => 'izidok-menjadi-pionir',
-        ];
         $data = [
             'title' => 'News & Update Detail',
-            'page' => 'news-update',
-            'blade' => $page[strtolower($slug)]
+            'page' => 'news-update'
         ];
+        $apiUrl = env('API_BE_URL')."api/v1/news/".$slug;
+        $response = Http::get($apiUrl);
+        $res = $response->json();
+        $data += $res['data'];
         return view('landing.others.news-detail', $data);
     }
 

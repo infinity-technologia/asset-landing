@@ -15,7 +15,7 @@
     <meta property="og:title"
         content="Aplikasi rekam medis berbasis website yang telah tersertifikasi ISO 27001:2013, sekaligus dilengkapi dengan fitur operasional lengkap yang dapat mempermudah pelayanan pasien di klinik maupun tempat praktik dokter." />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="shortcut icon" href="{{ asset('favicon.png') }}" />
+    <link rel="shortcut icon" href="{{ $app['fav'] ?? asset('favicon.png') }}" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
     <link href="{{ asset('css/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
@@ -35,6 +35,7 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://media-app.wekonnek.id/konnek/widget/widgetchat.js"></script>
     <script src="https://media-app.wekonnek.id/konnek/widget/socket-io.client.js"></script>
+    @stack('style')
     <!-- End of KONNEK -->
 </head>
 

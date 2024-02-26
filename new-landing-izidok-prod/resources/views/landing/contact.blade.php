@@ -11,7 +11,7 @@
                 <div class="row py-5">
                     <div class="col">
                         <iframe style="border:0; width: 100%; height: 370px;"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.026337030271!2d106.79387927578139!3d-6.260261061291903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x66517b8cb4180971%3A0xc27bbf2d71f5030b!2sizidok!5e0!3m2!1sid!2sid!4v1697611425066!5m2!1sid!2sid"
+                            src="{{ $app['gmaps'] ?? 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.026337030271!2d106.79387927578139!3d-6.260261061291903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x66517b8cb4180971%3A0xc27bbf2d71f5030b!2sizidok!5e0!3m2!1sid!2sid!4v1697611425066!5m2!1sid!2sid' }} "
                             allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
@@ -21,8 +21,7 @@
                             <div class="address">
                                 <i class="bi bi-geo-alt"></i>
                                 <h4>Lokasi:</h4>
-                                <p>izidok
-                                    <br>{{ $app['address'] }}
+                                <p>{!! $app['address'] !!}
                                 </p>
                             </div>
                             <div class="email">

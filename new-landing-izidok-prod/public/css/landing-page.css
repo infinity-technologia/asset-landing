@@ -131,7 +131,7 @@
     background-position:50% 50%;
     background-repeat:no-repeat;    
 }
-.circle.rekam-medis{
+/* .circle.rekam-medis{
     background-image: url("../images/icons/rekam_medis.png");
 }
 .circle.bridging{
@@ -145,7 +145,7 @@
 }
 .circle.follow-up{
     background-image: url("../images/icons/follow_up.png");
-}
+} */
 
 /* pricing */
 .text-white .path1{

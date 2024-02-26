@@ -20,32 +20,15 @@
                     data-tns-next-button="#kt_news_slider_next1">
                     @foreach ($news as $item)
                         <div class="card-xl-stretch mx-3">
-                            <a href="{{ '#' }}"><img class="img-fluid rounded w-100"
-                                    src="{{ $item['images'] }}" alt=""></a>
+                            <a
+                                href="{{ $item['check'] == null ? route('news-update-detail', $item['slug']) : $item['check'] }}"><img
+                                    class="img-fluid rounded w-100" src="{{ $item['images'] }}" alt=""></a>
                             <div class="py-5 px-4 text-start text-md-justify rounded-bottom">
-                                <a href="{{ route('news-update-detail', 'izidok-siap-menjadi-pionir-ekosistem-kesehatan-digital-di-indonesia') }}"
+                                <a href="{{ $item['check'] == null ? route('news-update-detail', $item['slug']) : $item['check'] }}"
                                     class="text-gray-800 fw-bold text-hover-primary text-dark lh-base">{{ $item['title'] }}</a>
                             </div>
                         </div>
                     @endforeach
-                    {{-- <div class="card-xl-stretch mx-3">
-                        <a href="{{ route('news-update-detail','izidok-terus-berkembang-demi-mendukung-kebijakan-pemerintah-terkait-rekam-medis-elektronik') }}"><img class="img-fluid rounded w-100" src="{{ asset('images/news/news1.jpg') }}" alt=""></a>
-                        <div class="py-5 px-4 text-start text-md-justify rounded-bottom">
-                            <a href="{{ route('news-update-detail','izidok-terus-berkembang-demi-mendukung-kebijakan-pemerintah-terkait-rekam-medis-elektronik') }}" class="text-gray-800 fw-bold text-hover-primary text-dark lh-base">izidok Terus Berkembang Demi Mendukung Kebijakan Pemerintah Terkait Rekam Medis Elektronik</a>
-                        </div>
-                    </div>
-                    <div class="card-xl-stretch mx-3">
-                        <a href="https://dailysocial.id/post/izidok-e-rekam-medis" target="_blank"><img class="img-fluid rounded w-100" src="{{ asset('images/news/news2.jpg') }}" alt=""></a>
-                        <div class="py-5 px-4 text-start text-md-justify rounded-bottom">
-                            <a href="https://dailysocial.id/post/izidok-e-rekam-medis" target="_blank" class="text-gray-800 fw-bold text-hover-primary text-dark lh-base">Izidok Kembangkan Layanan e-Rekam Medis untuk Bantu Dokter Jalankan Praktik Mandiri</a>
-                        </div>
-                    </div>
-                    <div class="card-xl-stretch mx-3">
-                        <a href="https://www.jpnn.com/news/peduli-kemanusiaan-hidup-sehat-iziklaim-izidok-gelar-donor-darah" target="_blank"><img class="img-fluid rounded w-100" src="{{ asset('images/news/news2.jpg') }}" alt=""></a>
-                        <div class="py-5 px-4 text-start text-md-justify rounded-bottom">
-                            <a href="https://www.jpnn.com/news/peduli-kemanusiaan-hidup-sehat-iziklaim-izidok-gelar-donor-darah" target="_blank" class="text-gray-800 fw-bold text-hover-primary text-dark lh-base">Peduli Kemanusiaan & Hidup Sehat, Iziklaim & Izidok Gelar Donor Darah</a>
-                        </div>
-                    </div> --}}
                 </div>
                 <button class="btn btn-icon btn-active-color-primary" id="kt_news_slider_prev1">
                     <i class="ki-duotone ki-left fs-2x"></i>
