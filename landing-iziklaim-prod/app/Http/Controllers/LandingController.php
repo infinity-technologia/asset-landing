@@ -22,6 +22,30 @@ class LandingController extends Controller
             return 'API NOT WORKING';
         }
     }
+    public function newsDetail($slug){
+        $apiUrl = env('API_BE_URL').'api/v1/news/'.$slug;
+        $data['title'] = 'News Detail';
+        $response = Http::get($apiUrl);
+        if ($response->successful()) {
+            $res = $response->json();
+            $data += $res['data'];
+            return view('landing.news-detail', $data);
+        }else{
+            return 'API NOT WORKING';
+        }
+    }
+    public function newsAll(){
+        $apiUrl = env('API_BE_URL')."api/v1/iziklaim";
+        $data['title'] = 'News & Updates';
+        $response = Http::get($apiUrl);
+        if ($response->successful()) {
+            $res = $response->json();
+            $data += $res['data'];
+            return view('landing.news-all', $data);
+        }else{
+            return 'API NOT WORKING';
+        }
+    }
 
     public function formDownloadProfile(){
         $data['title'] = 'Download Company Profile';

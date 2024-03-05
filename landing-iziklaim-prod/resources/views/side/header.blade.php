@@ -26,6 +26,9 @@
                     <a class="nav-link scrollto" href="{{ route('home') }}#events">Acara</a>
                 </li>
                 <li>
+                    <a class="nav-link scrollto" href="{{ route('home') }}#news">News & Updates</a>
+                </li>
+                <li>
                     <a class="nav-link scrollto" href="{{ route('home') }}#contact">Hubungi Kami</a>
                 </li>
                 <li>

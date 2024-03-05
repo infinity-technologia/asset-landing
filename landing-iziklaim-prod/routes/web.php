@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [LandingController::class, 'index'])->name('home');
+Route::get('/news/{slug}', [LandingController::class, 'newsDetail'])->name('news.detail');
+Route::get('/news-all', [LandingController::class, 'newsAll'])->name('news.all');
+
 Route::get('/download-profile', [LandingController::class, 'formDownloadProfile'])->name('download-profile');
 Route::post('/send-mail/{form}', [LandingController::class, 'sendMail'])->name('send-mail');
 Route::get('/term-and-conditions', [LandingController::class, 'tnc'])->name('tnc');

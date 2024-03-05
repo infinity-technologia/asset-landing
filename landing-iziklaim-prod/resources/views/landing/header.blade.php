@@ -26,6 +26,9 @@
                     <a class="nav-link scrollto" href="#events">Acara</a>
                 </li>
                 <li>
+                    <a class="nav-link scrollto" href="#news">News & Updates</a>
+                </li>
+                <li>
                     <a class="nav-link scrollto" href="#contact">Hubungi Kami</a>
                 </li>
                 <li>
