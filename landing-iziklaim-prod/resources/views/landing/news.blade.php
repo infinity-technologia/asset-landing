@@ -9,15 +9,23 @@
 </style>
 <section id="news" class="events section-bg">
     <div class="container-fluid px-5" data-aos="fade-up">
-        <div class="section-title">
-            <h2>NEWS</h2>
+        <div class="section-title" style="display: flex; justify-content: space-between;">
+            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                <h2 style="margin: 0;">NEWS</h2>
+            </div>
+            <div style="align-self: flex-end;">
+                <a href="{{ route('news.all') }}">SEE ALL NEWS</a>
+            </div>
         </div>
+
+
+
         <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
             <div class="swiper-wrapper">
                 @foreach ($news as $ev)
-                    <a style="text-url"
-                        href="{{ $ev['check'] == null ? route('news.detail', $ev['slug']) : $ev['check'] }}">
-                        <div class="swiper-slide">
+                    <div class="swiper-slide">
+                        <a style="text-url"
+                            href="{{ $ev['check'] == null ? route('news.detail', $ev['slug']) : $ev['check'] }}">
                             <div class="events-item">
                                 <div class="member">
                                     <div class="events-img">
@@ -28,8 +36,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 @endforeach
                 <!-- End testimonial item -->
             </div>

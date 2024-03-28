@@ -17,6 +17,7 @@ class LandingController extends Controller
         if ($response->successful()) {
             $res = $response->json();
             $data += $res['data'];
+            // dd($data);
             return view('landing', $data);
         }else{
             return 'API NOT WORKING';

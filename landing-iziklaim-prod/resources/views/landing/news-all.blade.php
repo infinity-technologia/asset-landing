@@ -3,22 +3,21 @@
 
 
 @section('content')
-    @php
-        function extractParagraphs($data)
-        {
-            // Remove <figure> elements
-            $dataWithoutFigure = preg_replace('/<figure[^>]*>.*?<\/figure>/s', '', $data);
-
-            // Extract content inside <p> tags
-            preg_match_all('/<p>(.*?)<\/p>/', $dataWithoutFigure, $matches);
-
-            // Return the extracted content as an array
-            return $matches[1];
-        }
-    @endphp
     <style>
         .text-justify {
             text-align: justify;
+        }
+
+        .text-hover-primary:hover {
+            color: blue;
+            /* Change text color to blue on hover */
+            /* Additional styles for hover state if needed */
+        }
+
+        .text-dark {
+            color:
+                black;
+            /* Additional styles for dark text */
         }
     </style>
     <div id="kt_app_content" class="app-content flex-column-fluid">
@@ -38,14 +37,8 @@
                                 <p href="#" class="text-dark text-justify fs-3 fw-bold">{{ $news[0]['title'] }}</p>
                             </div>
                             <div class=" text-justify">
-
-                                <p class="mb-8">
-                                    @if ($news['0']['desc'] != null)
-                                        {!! substr(extractParagraphs($news['0']['desc'])[1], 0, 300) !!}...
-                                    @endif
-                                </p>
                                 <p>
-                                    <a href="{{ url('view/news/iziklaim/' . $news[0]['slug']) }}">Baca
+                                    <a href="{{ route('news.detail', $news[0]['slug']) }}">Baca
                                         selengkapnya</a>
                                 </p>
                             </div>
@@ -53,23 +46,21 @@
 
                         <div class="mt-5 mb-5">
                             <div class="row g-10">
-                                @foreach ($news as $item)
+                                @for ($i = 1; $i < count($news); $i++)
                                     <div class="col-md-4">
                                         <div class="card-xl-stretch">
                                             <a
-                                                href="{{ $item['check'] == null ? url('view/news/iziklaim/' . $item['slug']) : $item['check'] }}"><img
-                                                    class="img-fluid rounded w-100" src="{{ $item['images'] }}"
-                                                    alt=""></a>
+                                                href="{{ $news[$i]['check'] == null ? url('view/news/iziklaim/' . $news[$i]['slug']) : $news[$i]['check'] }}">
+                                                <img class="img-fluid rounded w-100" src="{{ $news[$i]['images'] }}"
+                                                    alt="">
+                                            </a>
                                             <div class="mt-3">
-                                                <a href="{{ $item['check'] == null ? url('view/news/iziklaim/' . $item['slug']) : $item['check'] }}"
-                                                    class="text-hover-primary text-dark lh-base">{{ $item['title'] }}</a>
-
+                                                <a href="{{ $news[$i]['check'] == null ? url('view/news/iziklaim/' . $news[$i]['slug']) : $news[$i]['check'] }}"
+                                                    style="color: black; font-weight: bold">{{ $news[$i]['title'] }}</a>
                                             </div>
                                         </div>
                                     </div>
-                                @endforeach
-
-
+                                @endfor
                             </div>
                         </div>
                     </div>
