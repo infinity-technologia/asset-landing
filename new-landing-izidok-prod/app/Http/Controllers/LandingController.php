@@ -14,6 +14,7 @@ class LandingController extends Controller
         $apiUrl = env('API_BE_URL')."api/v1/izidok";
         $data['title'] = 'Home';
         $response = Http::get($apiUrl);
+
         if ($response->successful()) {
             $res = $response->json();
             $data += $res['data'];
@@ -45,7 +46,9 @@ class LandingController extends Controller
         $apiUrl = env('API_BE_URL')."api/v1/news/".$slug;
         $response = Http::get($apiUrl);
         $res = $response->json();
+
         $data += $res['data'];
+
         return view('landing.others.news-detail', $data);
     }
 
@@ -65,7 +68,7 @@ class LandingController extends Controller
             'pesan' => 'required',
         ]);
         $mailSubject = 'Pesan Hubungi Kami Website izidok';
-        
+
         if ($validator->fails()) {
             $errMessage = $validator->errors()->first();
             $resp = [
@@ -105,7 +108,7 @@ class LandingController extends Controller
         ];
         return view('landing.others.privacy-policy', $data);
     }
-    
+
     public function faq(){
         $data = [
             'title' => 'Frequently Asked Questions',
